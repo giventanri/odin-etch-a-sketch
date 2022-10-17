@@ -10,3 +10,7 @@
     border: 0.1px gray hidden;
     aspect-ratio: 1
 }
+
+.grid-item-hovered {
+    background-color: black;
+}
