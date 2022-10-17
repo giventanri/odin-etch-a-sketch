@@ -1,16 +1,26 @@
+let btnGridSize = document.querySelector('#change-grid-size');
+btnGridSize.addEventListener('click', changeGridSize);
+
+function changeGridSize() {
+    console.log("click");
+}
+
 let container = document.querySelector('.grid-container')
 
-for (let i = 0; i < 256; i++) {
-    let grid = document.createElement('div');
 
-    // costumize grid here
-        
-    grid.setAttribute('class', 'grid-item');
-    grid.setAttribute('id', 'grid-item-' + i);
+function createGrid(size) {
+    container.innerHTML = '';
+    container.style.gridTemplateColumns = "repeat(" + size + ", 1fr)";
+    for (let i = 0; i < size**2; i++) {
+        let grid = document.createElement('div');
 
-    grid.addEventListener('mouseover', () => {
-        grid.classList.add('grid-item-hovered');
-    });
+        grid.setAttribute('class', 'grid-item');
+        grid.setAttribute('id', 'grid-item-' + i);
 
-    container.appendChild(grid);
+        grid.addEventListener('mouseover', () => {
+            grid.classList.add('grid-item-hovered');
+        });
+
+        container.appendChild(grid);
+    }    
 }
