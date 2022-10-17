@@ -1,0 +1,12 @@
+.grid-container {
+    height: 80vmin;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    border: 0.1px gray hidden;
+}
+
+.grid-item {
+    border: 0.1px gray hidden;
+    aspect-ratio: 1
+}
