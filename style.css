@@ -1,14 +1,12 @@
 .grid-container {
-    height: 90vmin;
+    height: 95vmin;
     aspect-ratio: 1;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    background-color: black;
 }
 
 .grid-item {
+    background-color: white;
     aspect-ratio: 1;
-}
-
-.grid-item-hovered {
-    background-color: black;
 }
